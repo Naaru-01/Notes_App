@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <link rel = "icon" href="https://cu1.uicdn.net/ff8/fa337c9b531f9c1c8b4de6d5fbc28/webapp/25292-device-selection.svg"
+    type = "image/x-icon">
+
+    <style>
+        * {
+            background-color: black
+        }
+
+        .ml13 {
+            text-align: center;
+            font-size: 1.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            font-weight: 600;
+            color: white;
+        }
+
+        .ml13 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+
+        .Narayan {
+            position: relative;
+            text-align: center;
+            font-family: cursive;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <span><a style="color: aliceblue; text-decoration: none; font-family:cursive" href="website.html">GO TO HOME BACK
+        </a> </span>
+
+
+    <div style="text-align: center;">
+        <hr>
+        <h1 class="ml13"><br><br>Rising Strong </h1>
+        <br>
+        <hr>
+        <h3 class="Narayan"> <br><br><br><br><br><br>This is simple note taking web app for user ! <br> You can Add, Delete your posts here ! <br>Developed by :  <b> NARAYAN </b>
+            <br><br> <br><br>
+        </h3>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+    <script>// Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml13');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0, -100],
+                opacity: [1, 0],
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i
+            })</script>
+</body>
+
+</html>
